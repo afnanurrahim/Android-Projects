@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="371dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:columnCount="2"
+        app:layout_constraintBottom_toTopOf="@+id/scoreTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quesTextView"
+        app:rowCount="2"
+        app:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:onClick="choose"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:onClick="choose"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:onClick="choose"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:onClick="choose"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="105dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="175dp"
+        android:text="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/circle"
+        android:textAlignment="center"
+        android:paddingVertical="15sp"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/quesTextView"
+        android:layout_width="318dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="46dp"
+        android:text="TextView"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/timeTextView" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="114dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginBottom="83dp"
+        android:text="0/0"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:paddingVertical="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="260dp"
+        android:layout_height="234dp"
+        android:id="@+id/cardView"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434">
+
+        <LinearLayout
+            android:layout_width="252dp"
+            android:layout_height="214dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="242dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="30sp"
+                android:text="GAME OVER"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="70sp"
+                android:layout_marginTop="30sp"
+                android:text="PLAY AGAIN"
+                android:onClick="gameLayout"
+                android:id="@+id/playAgain"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
