@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Letters">
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape"
+        android:text="@string/_30"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wordTextView"
+        android:background="@drawable/border"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="100dp"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerTextView" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/submit"
+        android:backgroundTint="#021CAB"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wordTextView" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="295dp"
+        android:layout_height="126dp"
+        app:columnCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitButton"
+        app:layout_constraintVertical_bias="0.387"
+        app:rowCount="2"
+        app:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/letterButton1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/minus"
+            android:backgroundTint="#021CAB"
+            android:text="-"
+            android:textSize="25dp"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/letterButton2"
+            android:layout_width="50dp"
+            android:backgroundTint="#021CAB"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/minus"
+            android:text="-"
+            android:textSize="25dp"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/letterButton3"
+            android:layout_width="50dp"
+            android:backgroundTint="#021CAB"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/minus"
+            android:text="-"
+            android:textSize="25dp"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/letterButton4"
+            android:layout_width="50dp"
+            android:backgroundTint="#021CAB"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="25dp"
+            app:layout_column="3"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/letterButton5"
+            android:layout_width="50dp"
+            android:backgroundTint="#021CAB"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="25dp"
+            app:layout_column="4"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/letterButton6"
+            android:layout_width="50dp"
+            android:backgroundTint="#021CAB"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="25dp"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/letterButton7"
+            android:layout_width="50dp"
+            android:backgroundTint="#021CAB"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="25dp"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/letterButton8"
+            android:layout_width="50dp"
+            android:backgroundTint="#021CAB"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="25dp"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/letterButton9"
+            android:layout_width="50dp"
+            android:backgroundTint="#021CAB"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="25dp"
+            app:layout_column="3"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/letterButton10"
+            android:layout_width="50dp"
+            android:backgroundTint="#021CAB"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            app:layout_column="4"
+            app:layout_row="1" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#FF0000"
+        android:text="X"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/wordTextView"
+        app:layout_constraintTop_toBottomOf="@+id/timerTextView"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="315dp"
+        android:layout_height="289dp"
+        android:alpha="0"
+        android:backgroundTint="#011549"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ansTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="50dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/playAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="220dp"
+                android:text="Play Again" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
